@@ -1,5 +1,6 @@
 AppointmentManagementSystem.py.
-JoshuaY yu.zhuoc@northeastern.edu
+JoshuaY 
+yu.zhuoc@northeastern.edu
 2023-12-8
 
 I finished the final project and solved all the problems of the system, I think it's ready for any tests! I ran many examples and they all passed successfully.
