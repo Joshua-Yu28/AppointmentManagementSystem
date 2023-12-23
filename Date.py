@@ -1,5 +1,5 @@
 #AppointmentManagementSystem.py
-#Zhuocheng Yu
+#JoshuaY
 #Dec 8 2023
 """
     Represents a date.
