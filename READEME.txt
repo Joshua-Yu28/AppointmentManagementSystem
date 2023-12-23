@@ -1,0 +1,50 @@
+AppointmentManagementSystem.py.
+Zhuocheng Yu yu.zhuoc@northeastern.edu
+2023-12-8
+
+I finished the final project and solved all the problems of the system, I think it's ready for any tests! I ran many examples and they all passed successfully.
+
+2023-12-7
+AppointmentManagementSystem.py.
+Debug:
+userNameList = [] 
+It should be outside the while True loop because I need to store things instead of creating a new list every cycle.
+
+
+AppointmentManagementSystem.py.
+I learned how to use re to compile a format.
+import re
+#make sure input date is valid 
+            date = input("Please enter the date YYYY-MM-DD :")
+            date_pattern = re.compile(r'^\d{4}-\d{2}-\d{2}$')
+            if not date_pattern.match(date):
+                print("Invalid date.")
+                continue
+
+2023-12-8 
+AppointmentManagementSystem.py.  Appointment.py. 
+Debug: If I want to add an Appointment instance into User(userName).diary.appointmentList, I should first write a toList() method instead of __str__ method in Appointment, then use toList() to make it a list so that it can be added easily into User(userName).diary.appointmentList.
+
+AppointmentManagementSystem.py.
+userInstance = User(userName)
+for c in userInstance.diary.appointmentList:  
+Wrong! Because it's always creating new User(userName) instead	of referring to the one which has been created.
+After trying many different ways, I changed the structure to save User in dictionary. 
+
+Related code:
+userInstance = User(userNameLow)
+user_dict[userNameLow] = userInstance
+
+if delUserName in userNameList:
+userNameList.remove(delUserName)
+user_dict.get(delUserName,None).diary.appointmentList = []
+print(f"Username {delUserName} is deleted successfully!")
+
+user_dict.get(userNameSearch,None).diary.appointmentList.append(Appointment(date,st,et,purpose).toList())
+#print(Appointment(date,st,et,purpose).toList())
+#print(user_dict.get(userNameSearch,None).diary.appointmentList)
+
+
+AppointmentManagementSystem.py.
+flag = False# make sure when time conflicts, the program can return to the welcome page.
+
